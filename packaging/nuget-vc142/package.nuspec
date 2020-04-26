@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>libevent2-vc142</id>
+        <title>libevent2-vc142</title>
+        <version>2.1.8</version>
+        <authors>Niels Provos and Nick Mathewson</authors>
+        <owners>kobake</owners>
+        <license type="expression">BSD-3-Clause</license>
+        <projectUrl>https://github.com/kobake/libevent2-nuget-vc</projectUrl>
+        <icon>logo.png</icon>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>libevent2 for vc142. Compiler: VS 2019 16.5.4.</summary>
+        <description>libevent2, packaged for Visual Studio 2019 (vc142). Compiler: Visual Studio 2019 16.5.4.</description>
+        <releaseNotes>First edition.</releaseNotes>
+        <copyright>Copyright (c) 2007-2012 Niels Provos and Nick Mathewson</copyright>
+        <tags>native, libevent, libevent2, C, C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <!-- package resource -->
+        <file src="logo.png"                          target="" />
+
+
+        <!-- targets -->
+        <file src="package.targets"                   target="build\native\libevent2-vc142.targets" />
+
+
+        <!-- headers -->
+        <file src="..\..\libevent\include\*.h"        target="build\native\x86_include\" />
+        <file src="..\..\libevent\include\event2\*.h" target="build\native\x86_include\event2\" />
+        <file src="..\x86_include\event2\*.h"         target="build\native\x86_include\event2\" />
+
+        <file src="..\..\libevent\include\*.h"        target="build\native\x64_include\" />
+        <file src="..\..\libevent\include\event2\*.h" target="build\native\x64_include\event2\" />
+        <file src="..\x64_include\event2\*.h"         target="build\native\x64_include\event2\" />
+
+
+        <!-- static libraries -->
+        <file src="..\x86_debug\*.lib"                target="build\native\bin\x86_debug\" />
+        <file src="..\x86_release\*.lib"              target="build\native\bin\x86_release\" />
+
+        <file src="..\x64_debug\*.lib"                target="build\native\bin\x64_debug\" />
+        <file src="..\x64_release\*.lib"              target="build\native\bin\x64_release\" />
+    </files>
+</package>

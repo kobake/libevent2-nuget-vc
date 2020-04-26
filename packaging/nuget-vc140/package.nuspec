@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>libevent2-vc140</id>
+        <title>libevent2-vc140</title>
+        <version>2.1.8.0</version>
+        <authors>Niels Provos and Nick Mathewson</authors>
+        <owners>kobake</owners>
+        <licenseUrl>https://raw.githubusercontent.com/libevent/libevent/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/kobake/libevent2-vc140-nuget</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/kobake/libevent2-vc140-nuget/ver2.1.8-vc140-nuget/logo.png</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>libevent2 library packaged for Visual Studio 2015 (msvc14). This library is experimental, so use at your own risk.</summary>
+        <description>The libevent API provides a mechanism to execute a callback function when a specific event occurs on a file descriptor or after a timeout has been reached.</description>
+        <releaseNotes>First edition.</releaseNotes>
+        <copyright>Copyright (c) 2007-2012 Niels Provos and Nick Mathewson</copyright>
+        <tags>native, libevent, libevent2, C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="package.targets" target="build\native\libevent2-vc140.targets" />
+
+        <file src="..\..\include\*.h"        target="build\native\include" />
+        <file src="..\..\include\event2\*.h" target="build\native\include\event2" />
+
+        <file src="..\..\lib\Release\event.lib"        target="build\native\bin\event.lib" />
+        <file src="..\..\lib\Release\event_core.lib"   target="build\native\bin\event_core.lib" />
+        <file src="..\..\lib\Release\event_extra.lib"  target="build\native\bin\event_extra.lib" />
+    </files>
+</package>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- ======================================== -->
+  <!-- include directory (x86/x64)-->
+  <!-- ======================================== -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)x86_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)x64_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+
+  <!-- ======================================== -->
+  <!-- static library files -->
+  <!-- ======================================== -->
+  <ItemDefinitionGroup>
+    <!-- static libraries -->
+    <Link>
+      <AdditionalDependencies>event.lib;event_core.lib;event_extra.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+
+  <!-- ======================================== -->
+  <!-- static library directory x86 (debug/release) -->
+  <!-- ======================================== -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32' And ('$(PlatformToolset)' == 'v142' Or '$(PlatformToolset)' == 'CTP_Nov2013') And $(Configuration.IndexOf('Debug')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)bin\x86_debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'Win32' And ('$(PlatformToolset)' == 'v142' Or '$(PlatformToolset)' == 'CTP_Nov2013') And $(Configuration.IndexOf('Release')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)bin\x86_release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+
+  <!-- ======================================== -->
+  <!-- static library directory x64 (debug/release) -->
+  <!-- ======================================== -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' And ('$(PlatformToolset)' == 'v142' Or '$(PlatformToolset)' == 'CTP_Nov2013') And $(Configuration.IndexOf('Debug')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)bin\x64_debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' And ('$(PlatformToolset)' == 'v142' Or '$(PlatformToolset)' == 'CTP_Nov2013') And $(Configuration.IndexOf('Release')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)bin\x64_release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+</Project>

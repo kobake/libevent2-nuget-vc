@@ -1,8 +1,8 @@
 # libevent2-nuget-vc
-[libevent2](https://github.com/libevent/libevent) library NuGet packages building workplace.
+[libevent2](https://github.com/libevent/libevent) library NuGet packages building workspace.
 
 ## Nuget Gallery
-- [NuGet Gallery | libevent2-vc142 2.1.8](https://www.nuget.org/packages/libevent2-vc142)
+- [NuGet Gallery | libevent2-vc142 2.1.8.1](https://www.nuget.org/packages/libevent2-vc142)
 
 ## Usage
 Run the following command in the Package Manager Console on Visual Studio 2019.

@@ -3,7 +3,7 @@
     <metadata minClientVersion="2.5">
         <id>libevent2-vc142</id>
         <title>libevent2-vc142</title>
-        <version>2.1.8</version>
+        <version>2.1.8.1</version>
         <authors>Niels Provos and Nick Mathewson</authors>
         <owners>kobake</owners>
         <license type="expression">BSD-3-Clause</license>
@@ -12,9 +12,9 @@
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <summary>libevent2 for vc142. Compiler: VS 2019 16.5.4.</summary>
         <description>libevent2, packaged for Visual Studio 2019 (vc142). Compiler: Visual Studio 2019 16.5.4.</description>
-        <releaseNotes>First edition.</releaseNotes>
+        <releaseNotes>Fixed NuGet logo image.</releaseNotes>
         <copyright>Copyright (c) 2007-2012 Niels Provos and Nick Mathewson</copyright>
-        <tags>native, libevent, libevent2, C, C++</tags>
+        <tags>native,libevent,libevent2,C,C++</tags>
         <dependencies>
         </dependencies>
     </metadata>
